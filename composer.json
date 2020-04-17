@@ -1,0 +1,25 @@
+{
+    "name": "avplab/viber-api",
+    "keywords": [ "php", "viber", "viber-api", "rest api" ],
+    "description": "Viber Api supplies comfortable way to deal with Viber Rest API and Viber Bot creation",
+    "homepage": "http://github.com/avplab/viber-api",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Polupanov",
+            "email": "andrewfortalking@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AvpLab\\ViberApi\\": "./src"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2"
+    }
+}
