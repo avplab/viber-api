@@ -8,10 +8,45 @@ Install the component by using [Composer](https://getcomposer.org). Update your 
     "require": {
         "avplab/viber-api": "^1.0.0"
     }
-
 ## Usage
 
 To create any bot, the package provides two base classes `Callback\Request` and `Client`.
+
+### Registration
+
+Run the following script once to register your webhook(bot). It could be run locally.
+
+```
+#register.php
+
+namespace EchoBot;
+
+use AvpLab\ViberApi\Callback\Request;
+use AvpLab\ViberApi\Client;
+
+$token = '<TOKEN>';
+$name = 'Echo Bot';
+$url = 'https://webhook.url';
+
+$client = new Client($token, $name);
+
+$client->setWebhook(
+    $url,
+    [
+        Request::DELIVERED,
+        Request::SEEN,
+        Request::FAILED,
+        Request::CONVERSATION_STARTED,
+        Request::SUBSCRIBED,
+        Request::UNSUBSCRIBED,
+        Request::WEBHOOK,
+        Request::MESSAGE
+    ]
+);
+```
+### Code
+
+Once you are done with registration you can write the code of the bot
 
 ```
 namespace EchoBot;
