@@ -1,5 +1,7 @@
 # ViberApi
 
+[![Build Status](https://travis-ci.org/avplab/viber-api.svg?branch=master)](https://travis-ci.org/avplab/viber-api)
+
 The ViberApi gives an ability to create fully functional php bots for Viber, based on Viber REST API.
 
 ## Installation
