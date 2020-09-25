@@ -1,7 +1,5 @@
 # ViberApi
 
-[![Build Status](https://travis-ci.org/avplab/php-html-builder.svg?branch=master)](https://travis-ci.org/avplab/php-html-builder)
-
 The ViberApi gives an ability to create fully functional php bots for Viber, based on Viber REST API.
 
 ## Installation
@@ -84,33 +82,33 @@ _AvpLab/Callback/Request_
 
 The request object which contains all the info sent by Viber API
 
-- *isWebhook()* - the callback was sent on `webhook` event
-- *isSubscribed()* - the callback was sent on `subscribed` event
-- *isUnsubsribed()* - the callback was sent on `unsubscribed` event
-- isConversationStarted() - the callback was sent on `conversation_started` event
-- isDelivered() - the callback was sent on `delivered` event
-- isSeen() the - callback was sent on `seen` event
-- isFailed() - the callback was sent on `failed` event
-- isMessage() - the callback was sent on `message` event. User sent a message to Public Account(aka PA)
-- isMessageText() - the `text` message was sent to PA
-- isMessagePicture() - the `picture` message was sent to PA
-- isMessageVideo() - the `video` message was sent to PA
-- isMessageFile() - the `file` message was sent to PA
-- isMessageSticker() - the `sticker` message was sent to PA
-- isMessageUrl() - the `url` message was sent to PA
-- isMessageLocation() - the `location` message was sent to PA
-- isMessageContact() - the `contact` message was sent to PA
-- getEvent() - returns the callback event name, which triggered the callback
-- getTimestamp() - returns the time of event
-- getMessageToken() - returns Unique ID of the message
-- getMessage() - returns the message data
-- getMessageText() - returns the message.text string
-- getMessageTrackingData() - returns the message.tracking_data string
-- getMessageSender() - returns the sender data of the message
-- getMessageSenderId() - returns the sender.id
-- getConversationContext() - returns the context string of the callback triggered by `convestation_started` event. Any additional parameters added to the [deep link](https://developers.viber.com/docs/tools/deep-links) used to access the conversation passed as a string.
-- getConversationUser() - returns the user's data, who triggered the conversation.
-- getData() - returns the callback request data
+- _isWebhook()_ - the callback was sent on `webhook` event
+- _isSubscribed()_ - the callback was sent on `subscribed` event
+- _isUnsubsribed()_ - the callback was sent on `unsubscribed` event
+- _isConversationStarted()_ - the callback was sent on `conversation_started` event
+- _isDelivered()_ - the callback was sent on `delivered` event
+- _isSeen()_ the - callback was sent on `seen` event
+- _isFailed()_ - the callback was sent on `failed` event
+- _isMessage()_ - the callback was sent on `message` event. User sent a message to Public Account(aka PA)
+- _isMessageText()_ - the `text` message was sent to PA
+- _isMessagePicture()_ - the `picture` message was sent to PA
+- _isMessageVideo()_ - the `video` message was sent to PA
+- _isMessageFile()_ - the `file` message was sent to PA
+- _isMessageSticker()_ - the `sticker` message was sent to PA
+- _isMessageUrl()_ - the `url` message was sent to PA
+- _isMessageLocation()_ - the `location` message was sent to PA
+- _isMessageContact()_ - the `contact` message was sent to PA
+- _getEvent()_ - returns the callback event name, which triggered the callback
+- _getTimestamp()_ - returns the time of event
+- _getMessageToken()_ - returns Unique ID of the message
+- _getMessage()_ - returns the message data
+- _getMessageText()_ - returns the message.text string
+- _getMessageTrackingData()_ - returns the message.tracking_data string
+- _getMessageSender()_ - returns the sender data of the message
+- _getMessageSenderId()_ - returns the sender.id
+- _getConversationContext()_ - returns the context string of the callback triggered by `convestation_started` event. Any additional parameters added to the [deep link](https://developers.viber.com/docs/tools/deep-links) used to access the conversation passed as a string.
+- _getConversationUser()_ - returns the user's data, who triggered the conversation.
+- _getData()_ - returns the callback request data
 
 _AvpLab/Client_
 
