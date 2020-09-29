@@ -80,6 +80,7 @@ class Controller
      */
     private function prepareMessage(Message $message, $path)
     {
+        $message->setSender($this->client->getSenderName(), $this->client->getSenderAvatar());
         $messageData = $message->getData();
         $message->setTrackingData(($messageData['tracking_data'] ?? '') . '__path__'  . ($path ?? $this->request->getPath()));
         return $message;

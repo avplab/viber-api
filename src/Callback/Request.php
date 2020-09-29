@@ -246,7 +246,7 @@ class Request
      */
     public function getMessageTrackingData()
     {
-        return $this->isMessage() ? $this->data->message->tracking_data : null;
+        return $this->isMessage() ? ($this->data->message->tracking_data ?? null ) : null;
     }
 
     /**
