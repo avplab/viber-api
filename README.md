@@ -266,6 +266,7 @@ To become an action the controller's method must be ended with "Action" suffix.
 There are several methods avaiable:
 
 - _getRequest()_ - returns the `ControllerRequest` object.
+- _getClient()_ - returns the `Client` object.
 - _reply(Message $message, $path = null)_ - sends a Message object to the current user(sender).
     * $message - Message object(see [Messages](#Messages) section for details)
     * $path - redirects to the specific path. Once the user will reply on message to the bot, it will come into $path handler

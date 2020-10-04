@@ -166,7 +166,7 @@ class Bot
         $controller = new $class();
         $controller->setRequest($request);
         $controller->setClient($client);
-        return call_user_func([$controller, $action . 'Action'], $params ?? []);
+        return call_user_func([$controller, $action . 'Action'], $params ?: []);
     }
 
     /**
@@ -200,8 +200,13 @@ class Bot
         }
 
         if ($request->isMessage()) {
-            $route = $this->match($request->getPath());
-            if ($route) {
+            if ($request->isMessageText()) {
+                $route = $this->match($request->getMessageText());
+            }
+            if (empty($route)) {
+                $route = $this->match($request->getPath());
+            }
+            if (isset($route)) {
                 $this->callController($client, $request, $route);
             }
         }

@@ -54,7 +54,7 @@ class Client
                 CURLOPT_POSTFIELDS => $json,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_TIMEOUT => 5,
-                CURLOPT_CONNECTTIMEOUT => 1,
+                CURLOPT_CONNECTTIMEOUT => 5,
                 CURLOPT_HTTPHEADER => [
                     'Content-Type: application/json',
                     'Content-Length: ' . strlen($json),

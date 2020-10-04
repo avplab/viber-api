@@ -42,8 +42,16 @@ class Controller
     }
 
     /**
+     * @return Client
+     */
+    protected function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
      * @param Message $message
-     * @param null $path
+     * @param string|null $path
      * @return array
      */
     protected function reply(Message $message, $path = null)
@@ -54,7 +62,7 @@ class Controller
     /**
      * @param $receiver
      * @param Message $message
-     * @param null $path
+     * @param string|null $path
      * @return array
      */
     protected function send($receiver, Message $message, $path = null)
@@ -65,7 +73,7 @@ class Controller
     /**
      * @param Message $message
      * @param array $broadcastList
-     * @param null $path
+     * @param string|null $path
      * @return array
      */
     protected function broadcast(Message $message, array $broadcastList, $path = null)
@@ -75,7 +83,7 @@ class Controller
 
     /**
      * @param Message $message
-     * @param $path
+     * @param string $path
      * @return Message
      */
     private function prepareMessage(Message $message, $path)
